@@ -1,0 +1,130 @@
+#################################################################
+# KEYBOARD BINDINGS FOR ANY TWM
+#################################################################
+
+#################################################################
+# SUPER + FUNCTION KEYS
+#################################################################
+
+
+#Rofi
+super + space
+    rofi -show drun
+
+#################################################################
+# SUPER + ... KEYS
+#################################################################
+
+#Browser
+super + b
+    brave
+
+super + c
+    code
+
+#archlinux-logout
+super + x
+    archlinux-logout
+
+#Pavucontrol
+super + v
+    pavucontrol
+
+#kitty
+super + Return
+    kitty
+
+#Xkill
+super + Escape
+    xkill
+
+#File-Manager
+super + e
+	nemo
+
+#################################################################
+# SUPER + SHIFT KEYS
+#################################################################
+
+#reload sxhkd:
+ctrl + shift + Escape
+	pkill -USR1 -x sxhkd
+
+#################################################################
+# ALT + ... KEYS
+#################################################################
+
+#Wallpaper normal
+super + h
+    nitrogen --random --set-scaled --head=0 '/home/jesuar/Imágenes/wallpapers_animes'
+
+#Wallpaper normal screen 2
+super + j
+    nitrogen --random --set-zoom-fill --head=1 '/home/jesuar/Imágenes/wallpapers_animes'
+
+#Wallpaper anime
+super + p
+    nitrogen --random --set-scaled --head=0 '/mnt/2TB/.Pics/Wallpaper/'
+
+
+#################################################################
+#     SCREENSHOTS
+#################################################################
+
+#Scrot
+Print
+    scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
+
+super + shift + s
+    scrot -s '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
+
+
+#################################################################
+#     FUNCTION KEYS
+#################################################################
+
+
+#################################################################
+#     MULTIMEDIA KEYS
+#################################################################
+
+#Raises volume
+XF86AudioRaiseVolume
+    amixer set Master 10%+
+
+#Lowers volume
+XF86AudioLowerVolume
+    amixer set Master 10%-
+
+#Mute
+XF86AudioMute
+    amixer -D pulse set Master 1+ toggle
+
+#PLAY
+XF86AudioPlay
+    playerctl play-pause
+
+#Next
+XF86AudioNext
+    playerctl next
+
+#previous
+XF86AudioPrev
+    playerctl previous
+
+#Stop
+XF86AudioStop
+    playerctl stop
+
+#Brightness up
+XF86MonBrightnessUp
+    xbacklight -inc 10
+
+#Brightness down
+XF86MonBrightnessDown
+    xbacklight -dec 10
+
+#Calculadora
+XF86Calculator
+    kcalc
+

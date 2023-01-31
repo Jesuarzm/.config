@@ -1,0 +1,5 @@
+[Default Applications]
+image/jpeg=org.gnome.eog.desktop
+
+[Added Associations]
+image/jpeg=org.gnome.eog.desktop;

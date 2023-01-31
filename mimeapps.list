@@ -3,6 +3,8 @@ image/jpeg=org.gnome.eog.desktop
 x-scheme-handler/msteams=teams.desktop
 inode/directory=nemo.desktop
 application/x-gnome-saved-search=nemo.desktop
+application/pdf=atril.desktop
 
 [Added Associations]
 image/jpeg=org.gnome.eog.desktop;
+application/pdf=atril.desktop;

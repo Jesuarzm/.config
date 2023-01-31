@@ -1,15 +1,21 @@
+autostart
 BraveSoftware
 Code
 dconf
 discord
+eog
 gtk-2.0
 gtk-3.0
+Microsoft
+Microsoft Teams - Preview
 nemo
 neofetch
 nitrogen
 onlyoffice
 pulse
 spotify
+default.target.wants
+teams
 VirtualBox
 whatsapp-nativefier-d40211
 yay

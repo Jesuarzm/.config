@@ -31,7 +31,7 @@ alt + r
 # 	betterlockscreen -l blur
 
 super + Delete
-	i3lock-fancy
+	archlinux-logout
 
 
 #

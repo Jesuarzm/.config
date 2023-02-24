@@ -23,7 +23,7 @@ alt + m
 	telegram-desktop
 
 alt + r
-	kitty ranger
+	kitty cava desktop='^6' 
 
 
 # betterlockscreen -u path/to/directory -r 1920x1080 -b 0.5

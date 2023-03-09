@@ -4,8 +4,10 @@ x-scheme-handler/msteams=teams.desktop
 inode/directory=nemo.desktop
 application/x-gnome-saved-search=nemo.desktop
 application/pdf=atril.desktop
+image/png=org.gnome.eog.desktop
 
 [Added Associations]
 image/jpeg=org.gnome.eog.desktop;geeqie.desktop;
 application/pdf=atril.desktop;
 text/plain=userapp-kitty-N1HY01.desktop;
+image/png=org.gnome.eog.desktop;

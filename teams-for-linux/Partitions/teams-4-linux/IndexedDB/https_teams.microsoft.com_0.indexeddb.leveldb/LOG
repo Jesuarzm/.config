@@ -1,0 +1,13 @@
+2023/03/15-17:07:19.495 88f Creating DB /home/jesuar/.config/teams-for-linux/Partitions/teams-4-linux/IndexedDB/https_teams.microsoft.com_0.indexeddb.leveldb since it was missing.
+2023/03/15-17:07:19.500 88f Reusing MANIFEST /home/jesuar/.config/teams-for-linux/Partitions/teams-4-linux/IndexedDB/https_teams.microsoft.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/03/15-17:07:24.969 8e4 Level-0 table #5: started
+2023/03/15-17:07:24.986 8e4 Level-0 table #5: 1406142 bytes OK
+2023/03/15-17:07:24.989 8e4 Delete type=0 #3
+2023/03/15-17:07:44.088 8e5 Level-0 table #7: started
+2023/03/15-17:07:44.107 8e5 Level-0 table #7: 817507 bytes OK
+2023/03/15-17:07:44.109 8e5 Delete type=0 #4
+2023/03/15-17:07:44.110 8e5 Manual compaction at level-0 from '\x00)\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00*\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/03/15-17:07:49.974 8e4 Compacting 1@1 + 1@2 files
+2023/03/15-17:07:50.000 8e4 Generated table #8@1: 7050 keys, 1231938 bytes
+2023/03/15-17:07:50.000 8e4 Compacted 1@1 + 1@2 files => 1231938 bytes
+2023/03/15-17:07:50.002 8e4 compacted to: files[ 0 0 1 0 0 0 0 ]

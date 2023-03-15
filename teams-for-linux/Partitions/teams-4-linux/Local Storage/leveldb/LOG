@@ -1,0 +1,8 @@
+2023/03/15-17:06:40.730 88f Creating DB /home/jesuar/.config/teams-for-linux/Partitions/teams-4-linux/Local Storage/leveldb since it was missing.
+2023/03/15-17:06:40.780 88f Reusing MANIFEST /home/jesuar/.config/teams-for-linux/Partitions/teams-4-linux/Local Storage/leveldb/MANIFEST-000001
+2023/03/15-17:08:11.358 8e4 Level-0 table #5: started
+2023/03/15-17:08:11.373 8e4 Level-0 table #5: 89871 bytes OK
+2023/03/15-17:08:11.375 8e4 Delete type=0 #3
+2023/03/15-17:09:11.337 8e5 Level-0 table #7: started
+2023/03/15-17:09:11.378 8e5 Level-0 table #7: 676407 bytes OK
+2023/03/15-17:09:11.380 8e5 Delete type=0 #4

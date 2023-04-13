@@ -30,7 +30,7 @@
         "description": "Date format",
         "dependency": "use-custom-format",
         "tooltip": "Set your custom format here.",
-        "value": "%A %d %b %Y %l:%M %p"
+        "value": "| %A %d %b %Y |%l:%M %p |"
     },
     "format-button": {
         "type": "button",

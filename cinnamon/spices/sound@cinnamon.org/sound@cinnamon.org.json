@@ -14,14 +14,14 @@
         "default": false,
         "description": "Show Loop and Shuffle controls",
         "dependency": "playerControl",
-        "value": false
+        "value": true
     },
     "keyOpen": {
         "type": "keybinding",
         "description": "Show menu",
         "default": "<Shift><Super>s",
         "tooltip": "Set keybinding(s) to show the sound applet menu.",
-        "value": "<Shift><Super>s"
+        "value": "::"
     },
     "_knownPlayers": {
         "type": "generic",
@@ -46,7 +46,7 @@
         "default": false,
         "description": "Show song information on the panel",
         "dependency": "playerControl",
-        "value": false
+        "value": true
     },
     "truncatetext": {
         "type": "spinbutton",
@@ -69,14 +69,14 @@
             "Toggle Play / Pause": "player"
         },
         "description": "Action on middle click",
-        "value": "mute"
+        "value": "player"
     },
     "horizontalScroll": {
         "type": "switch",
         "default": false,
         "description": "Use horizontal scrolling to move between tracks",
         "dependency": "playerControl",
-        "value": false
+        "value": true
     },
     "showalbum": {
         "type": "switch",

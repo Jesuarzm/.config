@@ -155,4 +155,5 @@ configuration {
 //@theme "/home/jesuar/.local/share/rofi/themes/rounded-purple-dark.rasi"
 //@theme "/usr/share/rofi/themes/sidebar-v2.rasi"
 //@theme "/home/jesuar/.local/share/rofi/themes/simple-tokyonight.rasi"
-@theme "/home/jesuar/.local/share/rofi/themes/rounded-purple-dark.rasi"
+//@theme "/home/jesuar/.local/share/rofi/themes/rounded-purple-dark.rasi"
+@theme "/usr/share/rofi/themes/rounded-purple-dark.rasi"

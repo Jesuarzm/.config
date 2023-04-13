@@ -192,10 +192,10 @@
             "Deutscher Wetterdienst (Germany only)": "DeutscherWetterdienst",
             "Met Office UK (UK only)": "Met Office UK",
             "US National Weather (US only)": "US Weather",
+            "Pirate Weather (key needed)": "PirateWeather",
             "Visual Crossing (key needed)": "Visual Crossing",
             "Weatherbit (key needed)": "Weatherbit",
             "Tomorrow.io (key needed)": "Tomorrow.io",
-            "DarkSky (key needed)": "DarkSky",
             "AccuWeather (key needed)": "AccuWeather",
             "Weather Underground (key needed)": "WeatherUnderground"
         },
@@ -213,7 +213,7 @@
         "default": false,
         "description": "Manual Location",
         "tooltip": "Enable this if your location is not accurate",
-        "value": true
+        "value": false
     },
     "location": {
         "type": "entry",
@@ -221,7 +221,7 @@
         "dependency": "manualLocation",
         "description": "Location",
         "tooltip": "You can enter coordinates 'Latitude,Longitude' (e.g. 51.5085,-0.1257) or use 'City,Country-code' (e.g. London,UK) or try to enter {House number} {Street} {City/Town} {Postcode} {Country}. The search algorithm is very flexible with the format. After 3 seconds without typing the address you entered is replaced automatically for validating your choice.",
-        "value": "9.93333,-84.08333"
+        "value": "9.9333,-84.0845"
     },
     "saveLocation": {
         "type": "button",
@@ -274,8 +274,8 @@
         "type": "checkbox",
         "default": false,
         "description": "Enable minutely precipitation forecast",
-        "tooltip": "If you'd like to use this make sure you use your exact coordinates/address as location to help its accuracy. Currently implemented with OpenWeatherMap and MET Norway only.",
-        "value": false
+        "tooltip": "If you'd like to use this make sure you use your exact coordinates/address as location to help its accuracy. See Feature map on website on support for your provider",
+        "value": true
     },
     "temperatureUnit": {
         "type": "radiogroup",
@@ -375,7 +375,7 @@
         "default": false,
         "description": "Always show Hourly Weather",
         "tooltip": "Hide/Show button will be hidden and Hourly weather will be permanently visible.",
-        "value": false
+        "value": true
     },
     "verticalOrientation": {
         "type": "checkbox",
@@ -449,14 +449,7 @@
             }
         ],
         "default": [],
-        "value": [
-            {
-                "lat": 9.96164,
-                "lon": -84.0488,
-                "timeZone": "America/Costa_Rica",
-                "entryText": "9.96164,-84.0488"
-            }
-        ]
+        "value": []
     },
     "showSunrise": {
         "type": "checkbox",
@@ -468,7 +461,7 @@
         "type": "checkbox",
         "default": false,
         "description": "Display time in 24 hour format",
-        "value": false
+        "value": true
     },
     "temperatureHighFirst": {
         "type": "checkbox",
@@ -526,7 +519,7 @@
         "default": true,
         "tooltip": "Does not apply to custom iconset, that is symbolic by default",
         "description": "Use symbolic icons throughout the applet",
-        "value": true
+        "value": false
     },
     "useCustomMenuIcons": {
         "type": "checkbox",
@@ -583,5 +576,5 @@
         "description": "Selected path to save Logs",
         "value": ""
     },
-    "__md5__": "d0c0d2e97331f674a345b96b38273611"
+    "__md5__": "e6b54dec8ed2176f16983a8e729f11e1"
 }

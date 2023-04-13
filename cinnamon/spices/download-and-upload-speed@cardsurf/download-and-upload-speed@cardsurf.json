@@ -91,14 +91,14 @@
             "3 ": 3
         },
         "tooltip": "Decimal places of download and upload speed shown in the panel",
-        "value": 0
+        "value": -1
     },
     "gui_text_css": {
         "type": "entry",
         "default": "font-weight: bold;",
         "description": "Text CSS",
         "tooltip": "A CSS style applied to the text in the panel",
-        "value": "font-size: 12px"
+        "value": "font-weight: bold;"
     },
     "gui_received_icon_filename": {
         "type": "filechooser",
@@ -125,14 +125,14 @@
         "default": "font-size: 15px; padding: 5px; font-weight: normal;",
         "description": "Popup text CSS",
         "tooltip": "A CSS style applied to the description text in the hover popup",
-        "value": "font-size: 12px; padding: 5px; font-weight: normal;"
+        "value": "font-size: 15px; font-weight: normal;"
     },
     "hover_popup_numbers_css": {
         "type": "entry",
         "default": "font-size: 15px; padding: 5px; font-weight: bold;",
         "description": "Popup numbers CSS",
         "tooltip": "A CSS style applied to numbers in the hover popup",
-        "value": "font-size: 12px; padding: 5px; font-weight: bold;"
+        "value": "font-size: 15px; font-weight: bold;"
     },
     "minimum_bytes_received_to_display": {
         "type": "spinbutton",
@@ -205,7 +205,7 @@
         "units": "seconds",
         "description": "Save every",
         "tooltip": "How often to save total amount of data downloaded and uploaded to the file. 0 means no saving to the file.",
-        "value": 600
+        "value": 580.0
     },
     "total_data_end": {
         "type": "separator"
@@ -278,7 +278,7 @@
     "checked_interfaces_string": {
         "type": "generic",
         "default": "eth0",
-        "value": "enp3s0"
+        "value": "eth0"
     },
     "unplugged_interfaces_string": {
         "type": "generic",

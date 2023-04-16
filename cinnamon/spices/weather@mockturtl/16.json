@@ -375,7 +375,7 @@
         "default": false,
         "description": "Always show Hourly Weather",
         "tooltip": "Hide/Show button will be hidden and Hourly weather will be permanently visible.",
-        "value": true
+        "value": false
     },
     "verticalOrientation": {
         "type": "checkbox",

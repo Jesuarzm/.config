@@ -13,7 +13,7 @@
         "type": "checkbox",
         "default": false,
         "description": "Use Hotkey to toggle decoration of current window",
-        "value": false
+        "value": true
     },
     "hotkey": {
         "type": "keybinding",

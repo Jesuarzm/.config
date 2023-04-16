@@ -91,7 +91,7 @@
             "3 ": 3
         },
         "tooltip": "Decimal places of download and upload speed shown in the panel",
-        "value": -1
+        "value": 0
     },
     "gui_text_css": {
         "type": "entry",
@@ -143,7 +143,7 @@
         "units": "bytes",
         "description": "Minimum displayed download value",
         "tooltip": "A minimum download value to display in the panel",
-        "value": 0
+        "value": 100000
     },
     "minimum_bytes_sent_to_display": {
         "type": "spinbutton",
@@ -154,7 +154,7 @@
         "units": "bytes",
         "description": "Minimum displayed upload value",
         "tooltip": "A minimum upload value to display in the panel",
-        "value": 0
+        "value": 100000
     },
     "gui_end": {
         "type": "separator"
@@ -168,7 +168,7 @@
         "default": true,
         "description": "Show total download and upload on hover",
         "tooltip": "Show the hover popup with total amount of data downloaded and uploaded",
-        "value": true
+        "value": false
     },
     "bytes_start_time": {
         "type": "combobox",
@@ -205,7 +205,7 @@
         "units": "seconds",
         "description": "Save every",
         "tooltip": "How often to save total amount of data downloaded and uploaded to the file. 0 means no saving to the file.",
-        "value": 580.0
+        "value": 580
     },
     "total_data_end": {
         "type": "separator"
@@ -278,7 +278,7 @@
     "checked_interfaces_string": {
         "type": "generic",
         "default": "eth0",
-        "value": "eth0"
+        "value": ""
     },
     "unplugged_interfaces_string": {
         "type": "generic",

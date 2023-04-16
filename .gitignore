@@ -1,4 +1,5 @@
 autostart
+BlueMail
 BraveSoftware
 Code
 dconf
@@ -8,6 +9,7 @@ google-chrome
 gtk-2.0
 gtk-3.0
 htop
+libreoffice
 lutris
 Microsoft
 Microsoft Teams - Preview
@@ -25,3 +27,4 @@ yay
 vlc
 pavucontrol.ini
 QtProject.conf
+xed

@@ -7,6 +7,15 @@ from libqtile import layout, bar, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen, Rule
 from libqtile.command import lazy
 from libqtile.widget import Spacer
+from libqtile.backend.wayland import InputConfig
+
+# Configure input devices
+
+wl_input_rules = {
+    "type:keyboard": InputConfig(
+        kb_layout='es',
+    ),
+}
 
 #mod4 or mod = super key
 mod = "mod4"

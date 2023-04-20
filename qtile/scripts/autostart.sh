@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Session setup
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+dbus-update-activation-environment --systemd \
+	WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=$XDG_CURRENT_DESKTOP
+
 #starting utility applications at boot time
 volumeicon &
 nm-applet &

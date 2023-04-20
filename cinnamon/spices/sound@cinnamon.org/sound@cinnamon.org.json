@@ -34,7 +34,9 @@
             "banshee",
             "vlc",
             "rhythmbox",
-            "spotify"
+            "spotify",
+            "brave-browser",
+            "google-chrome"
         ]
     },
     "section2": {

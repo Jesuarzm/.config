@@ -1,0 +1,20 @@
+[$Version]
+update_info=ksmserver_update_loginMode_value.upd:ksmserver_update_loginMode_value_default_enum
+
+[LegacySession: saved at previous logout]
+clientMachine1=localhost
+command1=plank
+count=1
+
+[Session: saved at previous logout]
+clientId1=10145dbd1dd000168194608500000006130004
+clientId2=10145dbd1dd000168194630800000006130005
+count=2
+program1=/usr/lib/DiscoverNotifier
+program2=/usr/bin/whatsie
+restartCommand1=/usr/lib/DiscoverNotifier,-session,10145dbd1dd000168194608500000006130004_1681946615_428872
+restartCommand2=/usr/bin/whatsie,-session,10145dbd1dd000168194630800000006130005_1681946615_428886
+restartStyleHint1=0
+restartStyleHint2=0
+userId1=jesuar
+userId2=jesuar

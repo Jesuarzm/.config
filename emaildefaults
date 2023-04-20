@@ -1,0 +1,7 @@
+[Defaults]
+Profile=Por omisión
+
+[PROFILE_Por omisión]
+EmailClient[$e]=bluemail.desktop
+ServerType=
+TerminalClient=false

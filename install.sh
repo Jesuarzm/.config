@@ -17,7 +17,7 @@ else
         git clone https://aur.archlinux.org/yay-git.git &>> $INSTLOG
         cd yay-git
         makepkg -si --noconfirm &>> ../$INSTLOG
-        cd ..
+        cd ..""
         
     else
         echo -e "$CER - Yay es requerido para este script, adios!"

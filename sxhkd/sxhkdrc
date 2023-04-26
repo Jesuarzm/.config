@@ -22,10 +22,6 @@ alt + f
 alt + m
 	telegram-desktop
 
-alt + r
-	kitty cava desktop='^6' 
-
-
 # betterlockscreen -u path/to/directory -r 1920x1080 -b 0.5
 # super + Delete
 # 	betterlockscreen -l blur
@@ -37,16 +33,12 @@ super + Delete
 #
 # Wallpaper Setter
 #Wallpaper normal
-super + i
-    nitrogen --random --set-scaled --head=0 '/home/jesuar/Imágenes/wallpapers_animes'
-#Wallpaper normal screen 2
 super + o
-	nitrogen --random --set-zoom-fill --head=1 '/home/jesuar/Imágenes/wallpapers_animes'
+    nitrogen --random --set-scaled --head=0 '/home/jesuar/Imágenes/wallpapers_animes' && nitrogen --random --set-zoom-fill --head=1 '/home/jesuar/Imágenes/wallpapers_animes'
+
 #Wallpaper anime
 super + p
-    nitrogen --random --set-scaled --head=0 '/mnt/2TB/.Pics/Wallpaper/'
-    nitrogen --random --set-zoom-fill --head=1 '/mnt/2TB/.Pics/Wallpaper/'
-
+    nitrogen --random --set-scaled --head=0 '/mnt/2TB/.Pics/Wallpaper/' && nitrogen --random --set-zoom-fill --head=1 '/mnt/2TB/.Pics/Wallpaper/'
 
 #Scrot
 Print
@@ -187,6 +179,10 @@ super + shift + {Left,Right}
 
 super + {q,w,e,r,t}
 	bspc desktop -f '^{6-9,10}'
+
+super + KP_{0-9,Divide,Multiply,Subtract,Add,Decimal,Enter,Separator}
+    notify-send {0-9,Divide,Multiply,Subtract,Add,Decimal,Enter,Separator}2
+	
 
 # focus or send to the given desktop
 super + {_,alt + }{1-9,0}

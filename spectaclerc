@@ -1,8 +1,0 @@
-[$Version]
-update_info=spectacle_clipboard.upd:clipboard-settings-change,spectacle_rememberregion.upd:spectacle-migrate-rememberregion
-
-[GuiConfig]
-cropRegion=449,355,677,498
-
-[Save]
-lastSaveLocation=file:///home/jesuar/Imágenes/Screenshot_20230419_102327.png

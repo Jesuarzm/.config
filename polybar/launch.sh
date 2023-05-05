@@ -1,81 +1,27 @@
 #!/usr/bin/env bash
 
-dir="$HOME/.config/polybar"
-themes=(`ls --hide="launch.sh" $dir`)
+# Terminate already running bar instances
+killall -q polybar
+# If all your bars have ipc enabled, you can also use 
+# polybar-msg cmd quit
 
-launch_bar() {
-	# Terminate already running bar instances
-	killall -q polybar
+# Launch bar1 and bar2
+echo "---" | tee -a /tmp/polybar1.log /tmp/polybar2.log
+polybar jes0 2>&1 | tee -a /tmp/polybar1.log & disown
+polybar jes1 2>&1 | tee -a /tmp/polybar2.log & disown
+polybar jes2 2>&1 | tee -a /tmp/polybar2.log & disown
+polybar jes3 2>&1 | tee -a /tmp/polybar2.log & disown
 
-	# Wait until the processes have been shut down
-	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+polybar jes4 2>&1 | tee -a /tmp/polybar2.log & disown
 
-	# Launch the bar
-	if [[ "$style" == "hack" || "$style" == "cuts" ]]; then
-		polybar -q top -c "$dir/$style/config.ini" &
-		polybar -q bottom -c "$dir/$style/config.ini" &
-	elif [[ "$style" == "pwidgets" ]]; then
-		bash "$dir"/pwidgets/launch.sh --main
-	else
-		polybar -q main -c "$dir/$style/config.ini" &	
-	fi
-}
+polybar jes5 2>&1 | tee -a /tmp/polybar2.log & disown
 
-if [[ "$1" == "--material" ]]; then
-	style="material"
-	launch_bar
+polybar jes6 2>&1 | tee -a /tmp/polybar2.log & disown
 
-elif [[ "$1" == "--shades" ]]; then
-	style="shades"
-	launch_bar
+polybar jes7 2>&1 | tee -a /tmp/polybar2.log & disown
 
-elif [[ "$1" == "--hack" ]]; then
-	style="hack"
-	launch_bar
+polybar jes8 2>&1 | tee -a /tmp/polybar2.log & disown
 
-elif [[ "$1" == "--docky" ]]; then
-	style="docky"
-	launch_bar
+polybar jes9 2>&1 | tee -a /tmp/polybar2.log & disown
 
-elif [[ "$1" == "--cuts" ]]; then
-	style="cuts"
-	launch_bar
-
-elif [[ "$1" == "--shapes" ]]; then
-	style="shapes"
-	launch_bar
-
-elif [[ "$1" == "--grayblocks" ]]; then
-	style="grayblocks"
-	launch_bar
-
-elif [[ "$1" == "--blocks" ]]; then
-	style="blocks"
-	launch_bar
-
-elif [[ "$1" == "--colorblocks" ]]; then
-	style="colorblocks"
-	launch_bar
-
-elif [[ "$1" == "--forest" ]]; then
-	style="forest"
-	launch_bar
-
-elif [[ "$1" == "--pwidgets" ]]; then
-	style="pwidgets"
-	launch_bar
-
-elif [[ "$1" == "--panels" ]]; then
-	style="panels"
-	launch_bar
-
-else
-	cat <<- EOF
-	Usage : launch.sh --theme
-		
-	Available Themes :
-	--blocks    --colorblocks    --cuts      --docky
-	--forest    --grayblocks     --hack      --material
-	--panels    --pwidgets       --shades    --shapes
-	EOF
-fi
+echo "Bars launched..."

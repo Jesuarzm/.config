@@ -10,6 +10,9 @@
   <property name="log-level-apps" type="uint" value="0"/>
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
+      <value type="string" value="blueman"/>
+      <value type="string" value="brave-browser"/>
+      <value type="string" value="discord"/>
       <value type="string" value="notify-send"/>
       <value type="string" value="Spotify"/>
       <value type="string" value="whatsapp-nativefier-d40211"/>

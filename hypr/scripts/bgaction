@@ -1,6 +1,0 @@
-#!/usr/bin/bash
-
-#start swwww
-swww query || swww init
-
-swww img ~/Imágenes/wallpapers_animes/2.jpg

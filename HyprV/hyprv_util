@@ -18,15 +18,15 @@ get_theme() {
 update_theme() {
     #set the xfce and GTK theme
     if [[ $VER == "v4" || $VERTO == "v4-" ]]; then
-        xfconf-query -c xsettings -p /Net/IconThemeName -s "kora"
+        xfconf-query -c xsettings -p /Net/IconThemeName -s "Catppuccin-Mocha-Standard-Mauve$SWITCHTO"
         gsettings set org.gnome.desktop.interface icon-theme "kora"
     else 
-        xfconf-query -c xsettings -p /Net/IconThemeName -s "Adwaita$SWITCHTO"
-        gsettings set org.gnome.desktop.interface icon-theme "Adwaita$SWITCHTO"
+        xfconf-query -c xsettings -p /Net/IconThemeName -s "Catppuccin-Mocha-Standard-Mauve$SWITCHTO"
+        gsettings set org.gnome.desktop.interface icon-theme "kora"
     fi
 
-    xfconf-query -c xsettings -p /Net/ThemeName -s "Catppuccin-Mocha-Standard-Mauve-Dark"
-    gsettings set org.gnome.desktop.interface gtk-theme "Catppuccin-Mocha-Standard-Mauve-Dark"
+    xfconf-query -c xsettings -p /Net/ThemeName -s "kora"
+    gsettings set org.gnome.desktop.interface gtk-theme "Catppuccin-Mocha-Standard-Mauve$SWITCHTO"
 }
 
 get_ver() {

@@ -1,0 +1,134 @@
+#! /bin/sh
+
+# ##############################################################################
+# #                                  ENV VARS                                  # 
+# ##############################################################################
+
+## Environments
+export PATH="${PATH}:${HOME}/.config/bspwm/bin"
+
+# Parse colors from "~/.Xresources"
+xrdb -override "${HOME}/.Xresources"
+
+xrdb_query()
+{
+    [ -n "$XRDB_QUERY" ] || XRDB_QUERY="$(xrdb -query)"
+
+    echo "$XRDB_QUERY" | while IFS=';' read -r STRING; do
+        [ "${1}" = "${STRING%%\	*}" ] || continue
+        echo "${STRING##*\	}"
+        break
+    done
+}
+
+getcolors()
+{
+    #FOREGROUND="$(xrdb_query '*.foreground:')"
+    BACKGROUND="$(xrdb_query '*.background:')"
+    #BLACK="$(xrdb_query '*.color0:')"
+    #RED="$(xrdb_query '*.color1:')"
+    #GREEN="$(xrdb_query '*.color2:')"
+    #YELLOW="$(xrdb_query '*.color3:')"
+    #BLUE="$(xrdb_query '*.color4:')"
+    #MAGENTA="$(xrdb_query '*.color5:')"
+    #CYAN="$(xrdb_query '*.color6:')"
+    #WHITE="$(xrdb_query '*.color7:')"
+}
+
+getcolors
+
+
+# ##############################################################################
+# #                                  FUNCTIONS                                 # 
+# ##############################################################################
+
+# Credits to 6gk/polka
+rule() { bspc rule -a "$@" & }
+config() { bspc config "$@" & }
+
+# ##############################################################################
+# #                                AUTOSTART APPS                              #
+# ##############################################################################
+
+# Run keybindings daemon.
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Run EWW.
+$HOME/.local/bin/eww -c $HOME/.config/eww/bar --restart open bar &
+
+# Run notification daemon.
+dunst --config $HOME/.config/dunst/dunstrc &
+
+# Run Picom.
+picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 --config $HOME/.config/picom/picom.conf &
+
+# Run polkit daemon if doesn't started.
+[ -n "$(pidof polkit-gnome-authentication-agent-1)" ] || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# Run power manager.
+xfce4-power-manager &
+
+# Run keybindings daemon.
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Restore Wallpaper
+nitrogen --restore  
+
+# Enable numlock
+numlockx on &
+
+# Execute bspwm-specific scripts.
+bspfloat &
+
+# Fix cursor.
+xsetroot -cursor_name left_ptr 
+
+# ##############################################################################
+# #                                 WINDOW RULES                               #
+# ##############################################################################
+
+bspc monitor HDMI-0 -d 1 2 3 4 5 6 7 8 9 
+# bspc monitor DVI-D-0 -d  
+
+rule Code                    desktop=1   follow=on focus=on
+rule Brave-browser           desktop=2   follow=on focus=on
+rule Nemo                    desktop=3   follow=on focus=on
+rule Nemo                    desktop=3   follow=on focus=on
+rule Spotify                 desktop=6   follow=on focus=on
+rule discord                 desktop=7   follow=on focus=on
+rule Blueman-manager         state=floating
+rule Pavucontrol             state=floating
+rule Nitrogen                state=floating
+rule leagueclientux.exe      state=pseudo_tiled
+
+# ##############################################################################
+# #                            GENERAL CONFIGURATION                           #
+# ##############################################################################
+
+bspc subscribe node_state | while read -r _ _ _ _ state flag; do
+    if [ "$state" != "fullscreen" ]; then
+        continue
+    fi
+    if [ "$flag" == on ]; then
+        $HOME/.local/bin/eww -c $HOME/.config/bar close-all
+  else
+        $HOME/.local/bin/eww -c $HOME/.config/bar open bar
+    fi
+done &
+
+config border_width 3
+config window_gap 10
+config split_ratio 0.50
+
+config borderless_monocle true
+config gapless_monocle true
+config focus_follows_pointer true
+
+config focused_border_color "#99CC99"
+config normal_border_color "#000000"
+config presel_border_color "#8F3724"
+config urgent_border_color "#504339"
+config focused_private_border_color "#35BF5C"
+
+pkill borders ; borders &
+

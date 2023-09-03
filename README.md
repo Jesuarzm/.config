@@ -22,7 +22,7 @@ The [setup section](#setup) will guide you through the installation process.
 
 Here are some details about my setup:
 
-- **WM:** [bspwm](https://github.com/baskerville/bspwm)
+- **WM:** [bspwm](https://github.com/baskerville/bspwm) & [Hyprland](https://github.com/hyprwm/Hyprland)
 - **OS:** [Arch Linux](https://archlinux.org)
 - **Terminal:** [kitty](https://github.com/kovidgoyal/kitty)
 - **Shell:** [zsh](https://wiki.archlinux.org/index.php/Zsh)
@@ -60,6 +60,32 @@ yay -S bspwm sxhkd nemo rofi kitty calcurse todotxt \
 
    <br>
 
+ <details open>
+   <summary><strong>We also need the picom of Zaney</strong></summary>
+   
+> Clone the repository [picom](https://gitlab.com/Zaney/picom).
+```sh
+  git clone https://gitlab.com/Zaney/picom
+  cd picom
+  $ git submodule update --init --recursive
+  $ LDFLAGS="-L/usr/X11R6/lib -L/usr/local/lib" CPPFLAGS="-I/usr/X11R6/include -I/usr/local/include" meson --buildtype=release . build
+  $ ninja -C build
+
+```
+> To build.
+
+```sh
+  $ git submodule update --init --recursive
+  $ LDFLAGS="-L/usr/X11R6/lib -L/usr/local/lib" CPPFLAGS="-I/usr/X11R6/include -I/usr/local/include" meson --buildtype=release . build
+  $ ninja -C build
+
+```
+> To install
+
+```sh
+ $ ninja -C build install
+```
+
 > Then after the dependencies are installed, copy the files to it's respective folders.
 
    <details open>
@@ -67,6 +93,7 @@ yay -S bspwm sxhkd nemo rofi kitty calcurse todotxt \
 
 ```sh
  $ mkdir -p $HOME/.config/ && cp -r ./Bswpm/* $HOME/.config/
+ $ mkdir -p $HOME/.local/bin/ && cp -r ./Bswpm/bin/* $HOME/.local/bin/
 
 ```
 
@@ -100,16 +127,8 @@ yay -S bspwm sxhkd nemo rofi kitty calcurse todotxt \
 
 - **Elkowar's Wacky Widgets**
 
-  > If you're **NOT** using a monitor with a 1366x768 resolution, you might want to change the `x` and `y` values of the widgets on the config.
+  > If you're **NOT** using a monitor with a 1920x1080 resolution, you might want to change the `x` and `y` values of the widgets on the config.
 
-- **GTK Theme**
-
-  > You can find TokyoNight GTK theme [here](https://github.com/koiosdev/Tokyo-Night-Linux/tree/master/usr/share/themes/TokyoNight).
-
-- **Icon Theme <kbd>Suggested</kbd>**
-  > You can install [this](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) icon theme that suits the GTK theme.
-
-## Acknowledgements.
 
 - **Thanks to**
 

@@ -11,7 +11,8 @@
 
 ### Thanks for dropping by!
 
-<img src="https://raw.githubusercontent.com/rxyhn/bspdots/main/TokyoNight.png" alt="img" align="right" width="400px">
+<img src="https://github.com/Jesuarzm/Dotfiles/blob/master/bspwm_1.png" alt="img" align="right" width="400px">
+
 
 This is my personal collection of configuration files.
 
@@ -35,7 +36,7 @@ Here are some details about my setup:
 
 <!-- SETUP -->
 
-## Setup.
+## Setup For Bspwm.
 
 > This is step-by-step how to install these bspwm dotfiles. Just [R.T.F.M](https://en.wikipedia.org/wiki/RTFM).
 
@@ -49,8 +50,8 @@ Here are some details about my setup:
 > Assuming your **AUR Helper** is [yay](https://github.com/Jguer/yay).
 
 ```sh
- $ yay -S bspwm sxhkd rofi kitty picom-ibhagwan-git calcurse todotxt \
- feh jq dunst betterlockscreen brightnessctl playerctl maim \
+yay -S bspwm sxhkd nemo rofi kitty calcurse todotxt \
+ feh jq dunst betterlockscreen playerctl maim \
  xclip imagemagick
 
 ```
@@ -65,9 +66,8 @@ Here are some details about my setup:
    <summary><strong>Config and Binaries</strong></summary>
 
 ```sh
- $ mkdir -p $HOME/.config/ && cp -r ./config/* $HOME/.config/
- $ mkdir -p $HOME/.local/bin/ && cp -r ./bin/* $HOME/.local/bin/
- $ cp -r ./misc/* $HOME/
+ $ mkdir -p $HOME/.config/ && cp -r ./Bswpm/* $HOME/.config/
+
 ```
 
    </details>

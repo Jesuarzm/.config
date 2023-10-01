@@ -10,7 +10,7 @@
     "modules-left": [
         "custom/power_btn",
         "custom/lock_screen",
-        "wlr/workspaces"
+        "hyprland/workspaces"
     ],
     "modules-center": [
         "idle_inhibitor",
@@ -19,13 +19,12 @@
     ],
     "modules-right": [
         "cpu",
+        "memory",
         "pulseaudio",
         "pulseaudio#microphone",
-        "backlight",
-        "tray",
         "temperature",
+        "tray",
         "custom/power_profile",
-        "battery",
         "hyprland/language",
         "custom/myhyprv",
         "custom/light_dark"
@@ -66,7 +65,7 @@
         "tooltip": false
     },
 
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "on-click": "activate",
@@ -86,11 +85,19 @@
 
     "cpu": {
         "interval": 10,
-        "format": "",
+        "format": " {usage}%",
         "max-length": 10,
         "format-alt-click": "click-right",
-        "format-alt": " {usage}%",
-        "on-click": "kitty --start-as=fullscreen --title htop sh -c 'htop'"
+        "format-alt": "",
+        "on-click": "kitty --start-as=fullscreen --title gotop sh -c 'gotop'"
+    },
+    "memory": {
+        "interval": 10,
+        "format": " {}%",
+        "max-length": 10,
+        "format-alt-click": "click-right",
+        "format-alt": "",
+        "on-click": "kitty --start-as=fullscreen --title gotop sh -c 'gotop'"
     },
 
     "battery": {
@@ -108,7 +115,7 @@
     },
 
     "pulseaudio": {
-        "format": "{icon}",
+        "format": "{icon} {volume}%",
         "format-muted": "",
         "on-click": "~/.config/HyprV/waybar/scripts/volume --toggle",
         "on-click-right": "pavucontrol",
@@ -125,12 +132,12 @@
             "default": ["", "", ""]
         },
         "tooltip": true,
-        "tooltip-format": "{icon} {volume}%"
+        "tooltip-format": "{icon} "
     },
 
     "pulseaudio#microphone": {
         "format": "{format_source}",
-        "format-source": "",
+        "format-source": "  {volume}%",
         "format-source-muted": "",
         "on-click": "~/.config/HyprV/waybar/scripts/volume --toggle-mic",
         "on-click-right": "pavucontrol",
@@ -138,7 +145,7 @@
         "on-scroll-down": "~/.config/HyprV/waybar/scripts/volume --mic-dec",
         "scroll-step": 5,
         "tooltip": true,
-        "tooltip-format": " {volume}%"
+        "tooltip-format": ""
     },
 
     "backlight": {
@@ -162,5 +169,12 @@
         "on-click": "~/.config/HyprV/waybar/scripts/update-sys update",
         "interval": 300,
         "tooltip": true
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C ",
+        "format": "{temperatureC}°C "
     }
 }

@@ -1,5 +1,5 @@
 
-cd "/mnt/2TB/.Pics/Wallpaper/"
+cd "/run/media/jesuar/2TB/.Pics/Wallpaper/"
 SWWW_CANTIDAD_DE_LINEAS=`find | grep jpg | wc -l`
 SWWW_ELEGIR_1=$((1+RANDOM%$SWWW_CANTIDAD_DE_LINEAS))
 SWWW_ELEGIR_2=$((1+RANDOM%$SWWW_CANTIDAD_DE_LINEAS))

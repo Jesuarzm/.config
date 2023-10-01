@@ -57,7 +57,7 @@ color: $gray;
 }
 
 /* Occupied */
-.01, .02, .03, .04, .05, .06, .07, .08, .08, .09 {
+.01, .02, .03, .04, .05, .06, .07, .08, .09 {
   color: $foreground;
 }
 
@@ -67,7 +67,10 @@ color: $gray;
 .033,
 .044,
 .055,
-.066{
+.066,
+.077,
+.088,
+.099{
   color: $foreground;
 }
 
@@ -85,6 +88,15 @@ color: $gray;
 .0:nth-child(6){
   font-size: 1.7em;
 }
+.0:nth-child(7){
+  font-size: 1.7em;
+}
+.0:nth-child(8){
+  font-size: 1.7em;
+}
+.0:nth-child(9){
+  font-size: 1.7em;
+}
 .01,
 .011,
 .03,
@@ -97,12 +109,18 @@ color: $gray;
 }
 .04,
 .05,
+.07,
 .044,
-.055{
+.055,
+.077{
   font-size: 1.6em;
 }
 .06,
-.066{
+.066,
+.08,
+.088,
+.09,
+.099{
   font-size: 1.7em;
 }
 

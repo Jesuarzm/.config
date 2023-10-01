@@ -29,7 +29,7 @@
 
     "custom/launch_firefox": {
         "format": "",
-        "on-click": "brave",
+        "on-click": "firefox",
         "tooltip": false
     },
 
@@ -63,9 +63,12 @@
         "all-outputs": true,
         "tooltip-format": "{name} - {title}",
         "on-click": "activate",
-        "on-click-middle": "close",
+        "on-click-right": "close",
         "ignore-list": [
-            "wofi"
+            "wofi",
+            "discord",
+            "kitty",
+            "xwaylandvideobridge"
         ],
 	    "app_ids-mapping": {
 	        "steam_app_39210": "Final Fantasy 14"

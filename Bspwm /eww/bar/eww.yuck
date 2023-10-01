@@ -203,12 +203,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Bar Windows ;;
 (defwindow bar
-	:geometry (geometry :x "2" 
-						:y "4" 
+	:geometry (geometry :x "4" 
+						:y "5" 
 						:height "99%" 
 						:width "40px")
 	:monitor 0
-	:reserve (struts :distance "55px" 
+	:reserve (struts :distance "60px" 
 					 :side "left")
 	:wm-ignore false
 	:hexpand "true"

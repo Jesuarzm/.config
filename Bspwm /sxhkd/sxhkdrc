@@ -29,7 +29,7 @@ super + b
 
 # Launch Apps
 alt + {f,w,s}
-	{nemo,brave,code}
+	{nemo,firefox,code}
 
 
 # Color Picker
@@ -39,18 +39,17 @@ super + m
 ##---------- System Keys ----------##
 
 # Lockscreen
-ctrl + alt + l
+super + l
     betterlockscreen -l
 
 super + Delete
 	archlinux-logout
 	
 super + o
-    nitrogen --random --set-scaled --head=0 '/home/jesuar/Imágenes/wallpapers_animes' && nitrogen --random --set-zoom-fill --head=1 '/home/jesuar/Imágenes/wallpapers_animes'
-
+   sh $HOME/.config/bspwm/scripts/wallpaper.sh
 #Wallpaper anime
 super + p
-    nitrogen --random --set-scaled --head=0 '/mnt/2TB/.Pics/Wallpaper/' && nitrogen --random --set-zoom-fill --head=1 '/mnt/2TB/.Pics/Wallpaper/'
+    sh $HOME/.config/bspwm/scripts/wallpaper_h.sh
 
 # Take a screenshot
 Print
@@ -61,7 +60,7 @@ alt + Print
 	sh $HOME/.local/bin/takeshot --in5
 
 # Take screenshot in 10 second
-shift + Print	
+ctrl + shift + Print	
 	sh $HOME/.local/bin/takeshot --in10
 
 # Take screenshot of active window
@@ -69,7 +68,7 @@ ctrl + Print
 	sh $HOME/.local/bin/takeshot --win
 
 # Take screenshot of area
-ctrl + alt + Print
+super + shift + S
 	sh $HOME/.local/bin/takeshot --area
 
 #Raises volume

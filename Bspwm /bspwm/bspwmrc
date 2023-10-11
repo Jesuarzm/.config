@@ -50,17 +50,21 @@ config() { bspc config "$@" & }
 # #                                AUTOSTART APPS                              #
 # ##############################################################################
 
+
+pkill hidamari-player
+
 # Run keybindings daemon.
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Run EWW.
-$HOME/.local/bin/eww -c $HOME/.config/eww/bar --restart open bar &
+# $HOME/.local/bin/eww -c $HOME/.config/eww/bar --restart open bar &
 
 # Run notification daemon.
 dunst --config $HOME/.config/dunst/dunstrc &
 
 # Run Picom.
-picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 --config $HOME/.config/picom/picom.conf &
+# --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350
+picom -b --config $HOME/.config/picom/picom.conf &
 
 
 # Run polkit daemon if doesn't started.
@@ -73,7 +77,7 @@ xfce4-power-manager &
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Restore Wallpaper
-nitrogen --random --set-scaled --head=0 '/home/jesuar/Imágenes/wallpapers_animes' && nitrogen --random --set-zoom-fill --head=1 '/home/jesuar/Imágenes/wallpapers_animes' 
+sh $HOME/.config/bspwm/scripts/wallpaper.sh
 
 # Enable numlock
 numlockx on &
@@ -86,17 +90,26 @@ xsetroot -cursor_name left_ptr
 
 # Nm-Applet for Proton Vpn
 nm-applet &   
+blueman-applet &
+
+# Polybar
+$HOME/.config/polybar/launch.sh &
 
 # Better LockScren
 pkill xautolock
 xautolock -time 10 -locker "betterlockscreen -l" -notify 30 -notifier "notify-send 'Locker' 'Locking screen in 30 seconds'" &
+
+plank &
+
 # ##############################################################################
 # #                                 WINDOW RULES                               #
 # ##############################################################################
 
-bspc monitor HDMI-0 -d 1 2 3 4 5 6 7 8 9 
+bspc monitor HDMI-0 -d 1 2 3 4 5 6 7 8 9 10
 # bspc monitor DVI-D-0 -d  
 
+
+rule kitty                   state=floating center=true rectangle=800x425+0+0
 rule Code                    desktop=1   follow=on focus=on
 rule firefox                 desktop=2   follow=on focus=on
 rule Nemo                    desktop=3   follow=on focus=on
@@ -105,6 +118,8 @@ rule discord                 desktop=7   follow=on focus=on
 rule Blueman-manager         state=floating center=true rectangle=1376x625+0+0
 rule Pavucontrol             state=floating center=true rectangle=1376x625+0+0
 rule Nitrogen                state=floating center=true rectangle=1376x625+0+0
+rule gnome-calculator          state=floating center=true 
+rule gnome-calendar          state=floating center=true 
 rule leagueclientux.exe      state=floating center=true 
 
 # ##############################################################################
@@ -125,6 +140,8 @@ done &
 config border_width 3
 config window_gap 10
 config split_ratio 0.50
+config -m HDMI-0 top_padding 30
+config -m HDMI-0 bottom_padding 30
 
 config borderless_monocle true
 config gapless_monocle true

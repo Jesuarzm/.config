@@ -63,8 +63,8 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 dunst --config $HOME/.config/dunst/dunstrc &
 
 # Run Picom.
-# --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350
-picom -b --config $HOME/.config/picom/picom.conf &
+picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 --config $HOME/.config/picom/picom.conf &
+#picom -b --config $HOME/.config/picom/picom.conf &
 
 
 # Run polkit daemon if doesn't started.
@@ -111,7 +111,7 @@ bspc monitor HDMI-0 -d 1 2 3 4 5 6 7 8 9 10
 
 rule kitty                   state=floating center=true rectangle=800x425+0+0
 rule Code                    desktop=1   follow=on focus=on
-rule firefox                 desktop=2   follow=on focus=on
+rule Brave-browser           desktop=2   follow=on focus=on
 rule Nemo                    desktop=3   follow=on focus=on
 rule Spotify                 desktop=6   follow=on focus=on
 rule discord                 desktop=7   follow=on focus=on

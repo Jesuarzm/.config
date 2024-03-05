@@ -29,7 +29,7 @@ super + b
 
 # Launch Apps
 alt + {f,w,s}
-	{nemo,brave,code}
+	{thunar,brave,code}
 
 # Color Picker
 super + m
@@ -138,11 +138,11 @@ super + f
     bspc node -t "~"fullscreen
 
 # Toggle beetwen floating & tiled
-super + space
+super + a
     bspc node -t "~"{floating,tiled}
 
 # Pseudo Tiled & tiled mode
-super + {a,y}
+super + {s,d}
     bspc node -t "~"{pseudo_tiled,tiled}
 
 # Set the node flags

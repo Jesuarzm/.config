@@ -24,7 +24,7 @@ dunst --config $HOME/.config/dunst/dunstrc &
 # Run Picom.
 #picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 --config $HOME/.config/picom/picom.conf &
 # picom -b --config $HOME/.config/picom/picom.conf &
-compfy -b
+compfy -b  
 
 # Run polkit daemon if doesn't started.
 [ -n "$(pidof polkit-gnome-authentication-agent-1)" ] || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
@@ -53,8 +53,8 @@ blueman-applet &
 $HOME/.config/polybar/launch.sh &
 
 # Better LockScren
-pkill xautolock
-xautolock -time 5 -locker "betterlockscreen -l" -notify 30 -notifier "notify-send 'Locker' 'Locking screen in 30 seconds'" &
+#pkill xautolock
+#xautolock -time 5 -locker "betterlockscreen -l" -notify 30 -notifier "notify-send 'Locker' 'Locking screen in 30 seconds'" &
 
 pkill plank
 plank &
@@ -73,8 +73,8 @@ bspc monitor HDMI-0 -d 1 2 3 4 5
 
 rule kitty                   state=floating center=true rectangle=800x425+0+0
 rule Code                    desktop=1   follow=on focus=on
-rule Brave-browser                 desktop=2   follow=on focus=on
-rule Nemo                    desktop=3   follow=on focus=on
+rule Brave-browser           desktop=2   follow=on focus=on
+rule Thunar                  desktop=3   state=floating center=true follow=on focus=on
 rule Spotify                 desktop=6   follow=on focus=on
 rule discord                 desktop=7   follow=on focus=on
 rule Blueman-manager         state=floating center=true rectangle=1376x625+0+0
@@ -83,7 +83,7 @@ rule Nitrogen                state=floating center=true rectangle=1376x625+0+0
 rule gnome-calculator        state=floating center=true 
 rule gnome-calendar          state=floating center=true 
 rule leagueclientux.exe      state=floating center=true 
-rule Plank                   layer=above manage=on border=off
+rule plank                   layer=above manage=on border=off locked=on focus=off follow=off
 
 # ##############################################################################
 # #                            GENERAL CONFIGURATION                           #

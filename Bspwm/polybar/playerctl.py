@@ -84,19 +84,19 @@ def update_prefix_suffix(player_name="", status=""):
     if player_name != "":
         player_option = "-p " + player_name
 
-    prev_button = " %%{A:playerctl %s previous :}%c%%{A} "    %(player_option,control_chars[0])
-    play_button = " %%{A:playerctl %s play :}%c%%{A} "        %(player_option,control_chars[1])
-    pause_button = " %%{A:playerctl %s pause :}%c%%{A} "      %(player_option,control_chars[2])
-    next_button = " %%{A:playerctl %s next :}%c%%{A} "        %(player_option,control_chars[3])
+    #prev_button = " %%{A:playerctl %s previous :}%c%%{A} "    %(player_option,control_chars[0])
+    #play_button = " %%{A:playerctl %s play :}%c%%{A} "        %(player_option,control_chars[1])
+    #pause_button = " %%{A:playerctl %s pause :}%c%%{A} "      %(player_option,control_chars[2])
+    #next_button = " %%{A:playerctl %s next :}%c%%{A} "        %(player_option,control_chars[3])
 
-    suffix = "| " + prev_button
+    suffix = " " #+ prev_button
     if status == "Playing":
-        suffix += " "+pause_button
+        suffix += " "#+pause_button
         status_paused = False
     else:
-        suffix += " "+play_button
+        suffix += " "#+play_button
         status_paused = True
-    suffix += " "+next_button
+    suffix += " "#+next_button
     # print(suffix)
     display_suffix = suffix
 
@@ -145,7 +145,7 @@ def update_message():
             metadata_string_list.append(str(result))
         metadata_string = (" "+metadata_separator+" ").join(metadata_string_list)
         if visual_len(metadata_string) > message_display_len:
-            metadata_string = " " + metadata_string + " |"
+            metadata_string = " " + metadata_string + " - "
         update_prefix_suffix(name,status)
         tmp_message = ""
         if metadata_string:

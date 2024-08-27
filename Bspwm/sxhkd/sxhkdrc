@@ -10,30 +10,15 @@ super + Return
 super + shift + Return
 	bspc rule -a kitty -o state=floating follow=on center=true rectangle=490x310+0+0 && kitty
 
-# Toggle notification center
-super + u
-    sh $HOME/.local/bin/notificationcenter
-
-# Color Picker
-super + i
-	sh $HOME/.local/bin/xcolor-pick
-
 # program launcher
 alt + d
 	rofi -show drun
-# Toggle eww dashboard
-super + b
-    sh $HOME/.local/bin/dashboard
 
 ##---------- Applications ----------##
 
 # Launch Apps
 alt + {f,w,s}
-	{thunar,brave,code}
-
-# Color Picker
-super + m
-	sh $HOME/.local/bin/xcolor-pick
+	{nemo,brave,code}
 
 ##---------- System Keys ----------##
 
@@ -44,11 +29,13 @@ super + l
 super + Delete
 	archlinux-logout
 	
-super + o
+super + i
    sh $HOME/.config/bspwm/scripts/wallpaper.sh
 #Wallpaper anime
+super + o
+    sh $HOME/.config/bspwm/scripts/wallpaper_h_0.sh
 super + p
-    sh $HOME/.config/bspwm/scripts/wallpaper_h.sh
+    sh $HOME/.config/bspwm/scripts/wallpaper_h_1.sh
 
 # Take a screenshot
 Print
@@ -154,8 +141,7 @@ super + {_,shift + }{Left,Down,Up,Right}
 	bspc node -{f,s} {west,south,north,east}
 
 # Change focus to next window, including floating window
-alt + {_,shift + }Tab
-	rofi -show window -config ~/.config/rofi/configtab.rasi
+#alt + {_,shift + }Tab
 	#bspc node -f {next.local,prev.local}
 
 # Switch workspace

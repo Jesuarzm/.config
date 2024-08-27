@@ -17,5 +17,6 @@ polybar jes6 2>&1 | tee -a /tmp/polybar2.log & disown
 polybar jes7 2>&1 | tee -a /tmp/polybar2.log & disown
 polybar jes8 2>&1 | tee -a /tmp/polybar2.log & disown
 polybar jes9 2>&1 | tee -a /tmp/polybar2.log & disown
+polybar jes10 2>&1 | tee -a /tmp/polybar2.log & disown
 
 echo "Bars launched..."

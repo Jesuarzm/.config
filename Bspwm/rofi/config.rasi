@@ -149,4 +149,4 @@ hover-select: true;
       sorting-method:    "name";
   }
 }
-@theme "/home/jesuar/.config/rofi/launchpad.rasi"
+@theme "/home/jesuar/.config/rofi/style-1.rasi"

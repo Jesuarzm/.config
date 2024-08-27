@@ -179,7 +179,7 @@ NAVBAR
 PLAYBACK BAR
 ---------------
 */
-/* progress bar moves smoothly */
+/* playback progress bar moves smoothly */
 .x-progressBar-fillColor {
   transition: transform 1s linear;
 }
@@ -188,8 +188,7 @@ PLAYBACK BAR
   transition: left 1s linear;
 }
 
-.playback-progressbar-isInteractive .DuvrswZugGajIFNXObAr .x-progressBar-fillColor,
-.playback-progressbar-isInteractive .DuvrswZugGajIFNXObAr .progress-bar__slider {
+.progress-bar--isDragging .x-progressBar-fillColor, .progress-bar--isDragging .progress-bar__slider {
   transition: none;
 }
 
@@ -694,8 +693,8 @@ TOGGLE
 */
 .x-toggle-indicatorWrapper {
   background-color: transparent;
-  height: 20px;
-  width: 40px;
+  height: 20px !important;
+  width: 40px !important;
   box-shadow: 0 0 0 1px var(--spice-subtext);
 }
 
